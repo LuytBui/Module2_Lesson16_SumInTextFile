@@ -28,16 +28,13 @@ public class Main {
 
         String line;
         while ((line = bufferedReader.readLine()) != null){
-            int number = 0;
             try {
-                number = Integer.parseInt(line.trim());
+                int number = Integer.parseInt(line.trim());
                 System.out.println(number);
+                sum += number;
             } catch (NumberFormatException e) {
                 //
-            } finally {
-                sum += number;
             }
-
         }
         bufferedReader.close();
         fileReader.close();
